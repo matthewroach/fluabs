@@ -9,12 +9,25 @@ Example Markup for Tabs :
 
   (Requires jQuery-1.7.2 or higher)
 
-    $('ul.tabs a').fluabs();
+    $('#tabs').fluabs();
 
+    or
+
+    $('#tabs').fluabs({ 
+      tabs    : 'li a', 
+      current : 'current', 
+      content : '.tabcontent' 
+    });
+
+## Options
+
+`tabs : 'li a'` : the element within the selector you attach fluabs to  
+`current : 'current'` : the class you wish to use for your active state on the tab link  
+`content : '.tabcontent'` : the wrapper div for your tab's content divs  
 
 **HTML**
 
-    <ul class="nav tabs">
+    <ul id="tabs">
       <li><a href="#one" class="current">Tab One</a></li>
       <li><a href="#two">Tab Two</a></li>
       <li><a href="#three">Tab Three</a></li>
