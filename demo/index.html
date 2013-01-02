@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fluabs Demo</title>
+
+  <script type="text/javascript" src="../tests/lib/jquery.js"></script>
+  <script type="text/javascript" src="../src/fluabs.js"></script>
+  <!--
+    Minified Production Code :
+  -->
+  <!--
+    <script type="text/javascript" src="../dist/fluabs.min.js"></script>
+  -->
+
+  <script>
+    $(document).ready(function() {
+
+      $('#tabs').fluabs().addClass('test');
+      $('#tabs1').fluabs({
+        tabs    : 'a',
+        current : 'active',
+        content : '.tabcontent1'
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+
+  <ul id="tabs">
+    <li><a href="#one" class="current">Tab One</a></li>
+    <li><a href="#two">Tab Two</a></li>
+    <li><a href="#three">Tab Three</a></li>
+  </ul>
+
+  <div class="tabcontent">
+    <div class="tab" data-tab="#one">
+      <p>
+        This is some sample tab content in <strong>Tab One</strong>
+      </p>
+    </div>
+    <div class="tab" data-tab="#three">
+      <p>
+        This is some sample tab content in <strong>Tab Three</strong>
+      </p>
+    </div>
+    <div class="tab"data-tab="#two">
+      <p>
+        This is some sample tab content in <strong>Tab Two</strong>
+      </p>
+    </div>
+  </div>
+
+  <p id="tabs1">
+    <a href="#one" class="active">Tab One</a>
+    <a href="#two">Tab Two</a>
+    <a href="#three">Tab Three</a>
+  </p>
+
+  <div class="tabcontent1">
+    <div class="tab" data-tab="#one">
+      <p>
+        This is some sample tab content in <strong>Tab One</strong>
+      </p>
+    </div>
+    <div class="tab" data-tab="#three">
+      <p>
+        This is some sample tab content in <strong>Tab Three</strong>
+      </p>
+    </div>
+    <div class="tab"data-tab="#two">
+      <p>
+        This is some sample tab content in <strong>Tab Two</strong>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
