@@ -34,6 +34,10 @@ describe("fluabs", function() {
 
 describe('fluabs events', function() {
 
+  afterEach(function () {
+    $("#tabs").remove();
+  });
+
   it("click tab", function() {
 
     var spyEvent = spyOnEvent('#tabs li a', 'click' );
