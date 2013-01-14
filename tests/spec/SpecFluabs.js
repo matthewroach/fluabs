@@ -20,9 +20,9 @@ describe("fluabs", function() {
   });
 
 
-  it("tab one to be shown and others to be hidden", function() {
+  it("tab one to have class current and others to be hidden", function() {
 
-    expect( $('[data-tab="#one"]') ).toBe( ':visible' );
+    expect( $('[data-tab="#one"]') ).toHaveClass( 'current' );
 
     expect( $('[data-tab="#two"]') ).not.toBe( ':visible' );
 

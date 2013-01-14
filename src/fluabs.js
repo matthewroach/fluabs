@@ -15,7 +15,7 @@
           if ( sEl[i].className === s.current ) {
 
             var openTab = $(sEl[i]).attr('href');
-            $(s.content + ' div[data-tab='+openTab+']').show();
+            $(s.content + ' div[data-tab='+openTab+']').addClass(s.current).show();
 
           }
 
@@ -30,8 +30,8 @@
           sEl.removeClass(s.current);
           el.addClass(s.current);
 
-          $(s.content + ' div:not([data-tab='+id+'])').hide();
-          $(s.content + ' div[data-tab='+id+']').fadeIn();
+          $(s.content + ' div:not([data-tab='+id+'])').removeClass(s.current).hide();
+          $(s.content + ' div[data-tab='+id+']').fadeIn().addClass(s.current);
 
         });
 
