@@ -6,12 +6,11 @@ beforeEach(function () {
   fixture.fluabs();
 });
 
+afterEach(function () {
+  $("#tabs").remove();
+});
+
 describe("fluabs", function() {
-
-  afterEach(function () {
-    $("#tabs").remove();
-  });
-
 
   it("to be defined", function() {
 
@@ -34,10 +33,6 @@ describe("fluabs", function() {
 
 describe('fluabs events', function() {
 
-  afterEach(function () {
-    $("#tabs").remove();
-  });
-
   it("click tab", function() {
 
     var spyEvent = spyOnEvent('#tabs li a', 'click' );
@@ -48,7 +43,7 @@ describe('fluabs events', function() {
 
   });
 
-  it("click tab 2 - hide all tabs except tab 2", function() {
+  it("click tab 2 - hide all tabs except tab 2, tab 2 to have class current", function() {
 
     var spyEvent = spyOnEvent('#tabs li a[href=#two]', 'click');
 
@@ -61,17 +56,6 @@ describe('fluabs events', function() {
 
     expect( $('[data-tab="#one"]') ).not.toBe( ':visible' );
     expect( $('[data-tab="#three"]') ).not.toBe( ':visible' );
-
-  });
-
-  it("click tab 2 - tab 2 to have class current", function() {
-
-    var spyEvent = spyOnEvent('#tabs li a[href=#two]', 'click');
-
-    $('#tabs li a[href=#two]').click();
-
-    expect( $('#tabs li a[href=#two]') ).toHaveClass( 'current' );
-
 
   });
 
