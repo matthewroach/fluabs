@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 				}
 			},
 
+
 			min : {
 				dist : {
 					src : ['src/fluabs.js'],
@@ -19,15 +20,10 @@ module.exports = function(grunt) {
 				}
 			},
 
-			clean: {
-    		folder: "_SpecRunner.html",
-  		}
 
 		});
 
-		grunt.loadNpmTasks('grunt-jasmine-runner');
-		grunt.loadNpmTasks('grunt-clean');
 
-		grunt.registerTask('default', 'min clean');
+		grunt.registerTask('default', 'min');
 
 };
