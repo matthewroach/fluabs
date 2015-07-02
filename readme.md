@@ -2,7 +2,7 @@
 
 A very simple jQuery plugin for tabbed content
 
-  
+
 Example Markup for Tabs :
 
 **jQuery**
@@ -13,17 +13,17 @@ Example Markup for Tabs :
 
     or
 
-    $('#tabs').fluabs({ 
-      tabs    : 'li a', 
-      current : 'current', 
-      content : '.tabcontent' 
+    $('#tabs').fluabs({
+      tabs: 'li a',
+      current: 'current',
+      content: '.tabcontent'
     });
 
 ## Options
 
-`tabs : 'li a'` : the element within the selector you attach fluabs to  
-`current : 'current'` : the class you wish to use for your active state on the tab link  
-`content : '.tabcontent'` : the wrapper div for your tab's content divs  
+`tabs: 'li a'` : the element within the selector you attach fluabs to
+`current: 'current'` : the class you wish to use for your active state on the tab link
+`content: '.tabcontent'` : the wrapper div for your tab's content divs
 
 **HTML**
 
